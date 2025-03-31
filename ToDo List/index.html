@@ -1,117 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo App</title>
-
     <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 16px;
+        body {
+            font-family: 'Poppins', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f8ff;
+            background: linear-gradient(135deg, #cfd9df, #e2ebf0);
             margin: 0;
+            color: #333;
         }
 
-        nav{
-            height: 50px;
-            background-color: black;
-        }
-
-        section{
-            text-align: center;
-            background-color: azure;
-            padding: 20px;
+        section {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 25px;
             width: 400px;
-            border-radius: 1rem;
-            box-shadow: 0px 4px 10px rgba(0, 195, 255, 0.5);
+            border-radius: 25px;
+            box-shadow: 5px 30px 20px rgba(0, 0, 0, 0.599);
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+            backdrop-filter: blur(10px);
+            border: 10px solid rgb(0, 0, 0);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
         }
 
         .input-container {
             display: flex;
             gap: 10px;
             justify-content: center;
-            margin-bottom: 15px;
-        }
-        
-        h1{
-            color: rgb(1, 21, 20);
+            margin-bottom: 20px;
         }
 
         input {
             flex: 1;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            padding: 12px;
+            border: 2px solid #a0bacc;
+            border-radius: 8px;
             font-size: 1rem;
+            background: rgba(255, 255, 255, 0.6);
+            color: #333;
+            transition: 0.3s;
+            outline: none;
         }
 
-        .addTask{
-            background-color: rgba(2, 162, 236, 0.813);
-            height: 35px;
-            width: 80px;
-            font-size: 16px;
-            border: none;
-            border-radius: 8px;
+        input::placeholder {
+            color: #777;
+        }
+
+        input:focus {
+            border-color: #6fa3ef;
+        }
+
+        .addTask {
+            background: #6fa3ef;
             color: white;
+            border: none;
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
             transition: 0.3s;
         }
 
         .addTask:hover {
-            background-color:rgba(0, 109, 204, 0.913);
-            cursor: pointer;
+            background: #5a91d4;
         }
 
-        .delete{
-            background-color: red;
-            color: white;
-            border: none;
-            height: 30px;
-            width: 60px;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        .delete:hover{
-            cursor: pointer;
-            background-color: rgb(221, 0, 0);
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
         }
 
         ul li {
-            text-align: left;
-            background: #ffffff;
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            background: linear-gradient(135deg, #cfd9df, #e2ebf0);
+            padding: 12px;
+            margin: 5px 0;
+            border-radius: 8px;
             box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            color: #333;
+            transition: background 0.3s ease-in-out;
         }
 
-        li{
-            list-style-type: none;
+        .delete {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
         }
 
+        .delete:hover {
+            background: #c0392b;
+        }
     </style>
 </head>
+
 <body>
     <section>
-        <h1>To Do App</h1>
-        <div class="inputContainer">
+        <h1>To-Do List</h1>
+        <div class="input-container">
             <input type="text" placeholder="Enter your task">
-            <button class="addTask">Add Task</button>
+            <button class="addTask">Add</button>
         </div>
-        
-        <ul>
-            
-        </ul>
+
+        <ul></ul>
         <script src="script.js"></script>
     </section>
-    
 </body>
+
 </html>
