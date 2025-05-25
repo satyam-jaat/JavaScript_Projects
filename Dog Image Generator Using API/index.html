@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Axios Dog Image Fetcher</title>
+  <style>
+    img {
+      height: 500px;
+      width: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #breed {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    #loading {
+      display: none;
+      font-style: italic;
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>🐶 Get Random Dog Images</h1>
+  <button id="getImageBtn">Get Image</button>
+  <p id="loading">Loading...</p>
+  <p id="breed"></p>
+  <div>
+    <img class="image" src="" alt="dog image"/>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
