@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Search (Axios)</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #f0f8ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: lightblue;
+      padding: 30px;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .text input {
+      height: 45px;
+      width: 100%;
+      border-radius: 1rem;
+      border: 1px solid #ccc;
+      padding: 0 15px;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .btn button {
+      height: 40px;
+      width: 100%;
+      border-radius: 1rem;
+      background-color: green;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn button:hover {
+      background-color: darkgreen;
+    }
+
+    #list {
+      list-style-type: none;
+      padding: 0;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    #list li {
+      background-color: #ffffff;
+      padding: 12px 20px;
+      margin: 6px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 20px;
+      }
+
+      .text input,
+      .btn button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="text">
+      <input type="text" placeholder="Enter country name" />
+    </div>
+    <div class="btn">
+      <button>Search colleges</button>
+    </div>
+  </div>
+
+  <ul id="list"></ul>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
