@@ -1,0 +1,87 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+button{
+    height: 45px;
+    width: 180px;
+    font-size: 18px;
+    border:none;
+    border-radius: 10px;
+    background-color:#177687;
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+    box-shadow: 0px 10px 18px grey;
+}
+
+button:hover{
+    box-shadow: 0px 3px 10px grey;
+}
+
+h1{
+    color: rgb(46, 46, 46);
+}
+
+.btn-container {
+    display:flex;
+    justify-content: center;
+}
+
+.btn{
+    height: 200px;
+    width: 200px;
+    border: 10px solid black;
+    border-radius: 2.5rem;
+    padding: 10px;
+    margin: 1rem;
+    cursor: pointer;
+    box-shadow: 0px  10px 30px rgb(88, 88, 88);
+}
+
+.btn:hover {
+    box-shadow: 0px  4px 10px rgb(173, 173, 173);
+}
+
+.red{
+    background-color: #d95980;
+}
+
+.yellow{
+    background-color: #f99b45;
+}
+
+.green{
+    background-color: #63aac0;
+}
+
+.purple{
+    background-color: #819ff9;
+}
+
+.flash {
+    background-color: white;
+}
+
+
+.userflashred {
+    background-color: rgb(149, 0, 0);
+}
+
+.userflashyellow {
+    background-color: rgb(146, 98, 0);
+}
+
+
+.userflashgreen {
+    background-color: green;
+}
+
+
+.userflashpurple {
+    background-color: rgb(95, 0, 95);
+}
+
+
