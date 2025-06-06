@@ -43,3 +43,21 @@ h1{
     width: 50%;
     border-radius: 30px;
 }
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn{
+    border-radius: 10px;
+    height: 30px;
+    background-color: maroon;
+}
+
+.delete-btn a{
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}

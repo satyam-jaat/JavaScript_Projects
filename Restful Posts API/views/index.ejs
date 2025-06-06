@@ -13,13 +13,23 @@
             <div class="post">
                 <h3 class="user"> @ <%= post.username %></h3>
                 <h4 class="content">content: <%=post.content%></h4>
-                <a href="http://localhost:8080/posts/<%=post.id%>">See in Details</a>
+                <div class="buttons">
+                    <div>
+                        <a href="http://localhost:8080/posts/<%=post.id%>">See in Details</a>
+                        <a href="http://localhost:8080/posts/<%=post.id%>/edit">Edit</a>
+                    </div>
+                    <div class="delete-btn">
+                        <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+                            <button style="background-color: maroon; color: white; border: none; border-radius: 10px; height: 30px; ">Delete Post</button>
+                        </form>
+                    </div>
+                </div>
+
             </div>
         <% } %>
             
-        <div style="text-align: right; margin-right: 40px;">
+        <div style=" margin-right: 40px;">
             <button style="background-color: maroon; color: white; border: none; border-radius: 10px; height: 30px; "><a style="color: white; text-decoration: none;" href="http://localhost:8080/posts/new">Create new post</a></button>
-
         </div>
     </div>
     
